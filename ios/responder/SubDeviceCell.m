@@ -8,6 +8,7 @@
 
 #import "SubDeviceCell.h"
 #import "DeviceHelper.h"
+#import "DataTool.h"
 
 @implementation SubDeviceCell
 
@@ -17,7 +18,8 @@
 }
 
 -(void)stateChange:(NSNotification *)notification{
-    if ([_lb_name.text isEqual:[notification.object objectForKey:@"mac"]]) {
+    NSString *mac = [notification.object objectForKey:@"mac"];
+    if ([[[DataTool sharedDataTool]nickNameByDeviceName:mac]   isEqual:_lb_name.text]) {
         [self.iv_state setImage:[UIImage imageNamed:@"state_s"]];
     }else{
         [self.iv_state setImage:[UIImage imageNamed:@"state_n"]];

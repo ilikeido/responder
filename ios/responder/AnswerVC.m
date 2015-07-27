@@ -7,6 +7,8 @@
 //
 
 #import "AnswerVC.h"
+#import "AnswerCell.h"
+#import "DataTool.h"
 
 @interface AnswerVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -35,12 +37,35 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)back:(id)sender {
-    
-}
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [DataTool sharedDataTool].dataList.count;
+}
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    AnswerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
+    [tableView registerNib:[UINib nibWithNibName:@"AnswerCell" bundle:nil] forCellReuseIdentifier:@"AnswerCell"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"AnswerCell"];
+    cell.lb_name.text = [[DataTool sharedDataTool] nickNameByDeviceName:[[DataTool sharedDataTool].dataList objectAtIndex:indexPath.row]];
+
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+
+- (IBAction)backAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 
 @end

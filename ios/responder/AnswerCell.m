@@ -35,34 +35,24 @@
             [_iv_a setImage:[UIImage imageNamed:@"iconA_n"]];
         }
         if ([value containsObject:@"B"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_s"]];
+            [_iv_b setImage:[UIImage imageNamed:@"iconB_s"]];
         }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_n"]];
-        }
-        if ([value containsObject:@"B"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_s"]];
-        }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_n"]];
-        }
-        if ([value containsObject:@"B"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_s"]];
-        }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconB_n"]];
+            [_iv_b setImage:[UIImage imageNamed:@"iconB_n"]];
         }
         if ([value containsObject:@"C"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconC_s"]];
+            [_iv_c setImage:[UIImage imageNamed:@"iconC_s"]];
         }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconC_n"]];
+            [_iv_c setImage:[UIImage imageNamed:@"iconC_n"]];
         }
         if ([value containsObject:@"D"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconD_s"]];
+            [_iv_d setImage:[UIImage imageNamed:@"iconD_s"]];
         }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconD_n"]];
+            [_iv_d setImage:[UIImage imageNamed:@"iconD_n"]];
         }
         if ([value containsObject:@"E"]) {
-            [_iv_a setImage:[UIImage imageNamed:@"iconE_s"]];
+            [_iv_e setImage:[UIImage imageNamed:@"iconE_s"]];
         }else{
-            [_iv_a setImage:[UIImage imageNamed:@"iconE_n"]];
+            [_iv_e setImage:[UIImage imageNamed:@"iconE_n"]];
         }
     }
 }

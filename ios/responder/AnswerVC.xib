@@ -30,7 +30,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="back:" destination="-1" eventType="touchUpInside" id="lIc-XM-bmu"/>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Tkm-V1-SGq"/>
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="b0G-46-0Qq">
@@ -39,6 +39,10 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="583" id="n8Z-pq-Dhd"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="uv9-jN-U8u"/>
+                        <outlet property="delegate" destination="-1" id="0gM-eo-hwd"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

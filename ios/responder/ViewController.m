@@ -13,6 +13,7 @@
 #import "SubDeviceCell.h"
 #import "DataTool.h"
 #import "NickNameVC.h"
+#import "AnswerVC.h"
 
 @interface ViewController ()<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
@@ -201,6 +202,10 @@
 
 - (IBAction)begin:(id)sender {
     [DataTool sharedDataTool].dataList = self.subDevices;
+    AnswerVC *vc = [[AnswerVC alloc]init];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 -(void)dealloc{

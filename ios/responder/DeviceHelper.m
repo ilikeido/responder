@@ -218,7 +218,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DeviceHelper)
     NSString *dataString = [self dataToString:data];
     NSString *type = [dataString substringToIndex:4];
     NSString *mac = [dataString substringWithRange:NSMakeRange(4, 16)];
-    NSLog(@"mac :%@",mac);
+    NSLog(@"mac :%@，type:%@",mac,type);
     NSMutableArray *answers = [NSMutableArray array];
     NSString *noticicationName = @"";
     if ([@"f901" isEqual:type ]) {
