@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF365F7D1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F7C1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m */; };
+		DF365F801B65232100E8E9A3 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F7F1B65232100E8E9A3 /* GiFHUD.m */; };
+		DF365F821B6523F700E8E9A3 /* could.gif in Resources */ = {isa = PBXBuildFile; fileRef = DF365F811B6523F700E8E9A3 /* could.gif */; };
+		DF365F8B1B65362800E8E9A3 /* SubDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F891B65362800E8E9A3 /* SubDeviceCell.m */; };
+		DF365F8C1B65362800E8E9A3 /* SubDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF365F8A1B65362800E8E9A3 /* SubDeviceCell.xib */; };
+		DF365F8F1B65373300E8E9A3 /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F8E1B65373300E8E9A3 /* DataTool.m */; };
+		DF365F931B653C9700E8E9A3 /* NickNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F911B653C9700E8E9A3 /* NickNameVC.m */; };
+		DF365F941B653C9700E8E9A3 /* NickNameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF365F921B653C9700E8E9A3 /* NickNameVC.xib */; };
+		DF365F981B65B37200E8E9A3 /* AnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F961B65B37200E8E9A3 /* AnswerCell.m */; };
+		DF365F991B65B37200E8E9A3 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF365F971B65B37200E8E9A3 /* AnswerCell.xib */; };
+		DF365F9D1B65B74200E8E9A3 /* AnswerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F9B1B65B74200E8E9A3 /* AnswerVC.m */; };
+		DF365F9E1B65B74200E8E9A3 /* AnswerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF365F9C1B65B74200E8E9A3 /* AnswerVC.xib */; };
 		DFC906691B5FD99B00F4DFC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC906681B5FD99B00F4DFC5 /* main.m */; };
 		DFC9066C1B5FD99B00F4DFC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC9066B1B5FD99B00F4DFC5 /* AppDelegate.m */; };
 		DFC9066F1B5FD99B00F4DFC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC9066E1B5FD99B00F4DFC5 /* ViewController.m */; };
@@ -15,6 +27,7 @@
 		DFC906771B5FD99B00F4DFC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC906751B5FD99B00F4DFC5 /* LaunchScreen.xib */; };
 		DFC906831B5FD99B00F4DFC5 /* responderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC906821B5FD99B00F4DFC5 /* responderTests.m */; };
 		DFC9068D1B5FD9A700F4DFC5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC9068C1B5FD9A700F4DFC5 /* CoreBluetooth.framework */; };
+		DFFFF1011B6350A000B710D8 /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF1001B6350A000B710D8 /* DeviceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +41,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF365F7B1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		DF365F7C1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		DF365F7E1B65232100E8E9A3 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
+		DF365F7F1B65232100E8E9A3 /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
+		DF365F811B6523F700E8E9A3 /* could.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = could.gif; sourceTree = "<group>"; };
+		DF365F881B65362800E8E9A3 /* SubDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubDeviceCell.h; sourceTree = "<group>"; };
+		DF365F891B65362800E8E9A3 /* SubDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubDeviceCell.m; sourceTree = "<group>"; };
+		DF365F8A1B65362800E8E9A3 /* SubDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubDeviceCell.xib; sourceTree = "<group>"; };
+		DF365F8D1B65373300E8E9A3 /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
+		DF365F8E1B65373300E8E9A3 /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
+		DF365F901B653C9700E8E9A3 /* NickNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NickNameVC.h; sourceTree = "<group>"; };
+		DF365F911B653C9700E8E9A3 /* NickNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NickNameVC.m; sourceTree = "<group>"; };
+		DF365F921B653C9700E8E9A3 /* NickNameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NickNameVC.xib; sourceTree = "<group>"; };
+		DF365F951B65B37200E8E9A3 /* AnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCell.h; sourceTree = "<group>"; };
+		DF365F961B65B37200E8E9A3 /* AnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCell.m; sourceTree = "<group>"; };
+		DF365F971B65B37200E8E9A3 /* AnswerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
+		DF365F9A1B65B74200E8E9A3 /* AnswerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerVC.h; sourceTree = "<group>"; };
+		DF365F9B1B65B74200E8E9A3 /* AnswerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerVC.m; sourceTree = "<group>"; };
+		DF365F9C1B65B74200E8E9A3 /* AnswerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerVC.xib; sourceTree = "<group>"; };
 		DFC906631B5FD99A00F4DFC5 /* responder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = responder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC906671B5FD99B00F4DFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC906681B5FD99B00F4DFC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +74,9 @@
 		DFC906811B5FD99B00F4DFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC906821B5FD99B00F4DFC5 /* responderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = responderTests.m; sourceTree = "<group>"; };
 		DFC9068C1B5FD9A700F4DFC5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DFFFF0FF1B6350A000B710D8 /* DeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceHelper.h; sourceTree = "<group>"; };
+		DFFFF1001B6350A000B710D8 /* DeviceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHelper.m; sourceTree = "<group>"; };
+		DFFFF1021B63528400B710D8 /* ARCSingletonTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCSingletonTemplate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +98,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF365F7A1B65184B00E8E9A3 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				DF365F7E1B65232100E8E9A3 /* GiFHUD.h */,
+				DF365F7F1B65232100E8E9A3 /* GiFHUD.m */,
+				DF365F7B1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.h */,
+				DF365F7C1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
 		DFC9065A1B5FD99A00F4DFC5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 		DFC906651B5FD99A00F4DFC5 /* responder */ = {
 			isa = PBXGroup;
 			children = (
+				DF365F811B6523F700E8E9A3 /* could.gif */,
+				DF365F7A1B65184B00E8E9A3 /* ext */,
 				DFC9066A1B5FD99B00F4DFC5 /* AppDelegate.h */,
 				DFC9066B1B5FD99B00F4DFC5 /* AppDelegate.m */,
 				DFC9066D1B5FD99B00F4DFC5 /* ViewController.h */,
@@ -93,6 +141,23 @@
 				DFC906731B5FD99B00F4DFC5 /* Images.xcassets */,
 				DFC906751B5FD99B00F4DFC5 /* LaunchScreen.xib */,
 				DFC906661B5FD99B00F4DFC5 /* Supporting Files */,
+				DFFFF0FF1B6350A000B710D8 /* DeviceHelper.h */,
+				DFFFF1001B6350A000B710D8 /* DeviceHelper.m */,
+				DFFFF1021B63528400B710D8 /* ARCSingletonTemplate.h */,
+				DF365F881B65362800E8E9A3 /* SubDeviceCell.h */,
+				DF365F891B65362800E8E9A3 /* SubDeviceCell.m */,
+				DF365F8A1B65362800E8E9A3 /* SubDeviceCell.xib */,
+				DF365F8D1B65373300E8E9A3 /* DataTool.h */,
+				DF365F8E1B65373300E8E9A3 /* DataTool.m */,
+				DF365F901B653C9700E8E9A3 /* NickNameVC.h */,
+				DF365F911B653C9700E8E9A3 /* NickNameVC.m */,
+				DF365F921B653C9700E8E9A3 /* NickNameVC.xib */,
+				DF365F951B65B37200E8E9A3 /* AnswerCell.h */,
+				DF365F961B65B37200E8E9A3 /* AnswerCell.m */,
+				DF365F971B65B37200E8E9A3 /* AnswerCell.xib */,
+				DF365F9A1B65B74200E8E9A3 /* AnswerVC.h */,
+				DF365F9B1B65B74200E8E9A3 /* AnswerVC.m */,
+				DF365F9C1B65B74200E8E9A3 /* AnswerVC.xib */,
 			);
 			path = responder;
 			sourceTree = "<group>";
@@ -203,8 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF365F821B6523F700E8E9A3 /* could.gif in Resources */,
 				DFC906721B5FD99B00F4DFC5 /* Main.storyboard in Resources */,
+				DF365F941B653C9700E8E9A3 /* NickNameVC.xib in Resources */,
+				DF365F991B65B37200E8E9A3 /* AnswerCell.xib in Resources */,
+				DF365F8C1B65362800E8E9A3 /* SubDeviceCell.xib in Resources */,
 				DFC906771B5FD99B00F4DFC5 /* LaunchScreen.xib in Resources */,
+				DF365F9E1B65B74200E8E9A3 /* AnswerVC.xib in Resources */,
 				DFC906741B5FD99B00F4DFC5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +294,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC9066F1B5FD99B00F4DFC5 /* ViewController.m in Sources */,
+				DF365F9D1B65B74200E8E9A3 /* AnswerVC.m in Sources */,
+				DFFFF1011B6350A000B710D8 /* DeviceHelper.m in Sources */,
 				DFC9066C1B5FD99B00F4DFC5 /* AppDelegate.m in Sources */,
 				DFC906691B5FD99B00F4DFC5 /* main.m in Sources */,
+				DF365F8B1B65362800E8E9A3 /* SubDeviceCell.m in Sources */,
+				DF365F8F1B65373300E8E9A3 /* DataTool.m in Sources */,
+				DF365F801B65232100E8E9A3 /* GiFHUD.m in Sources */,
+				DF365F981B65B37200E8E9A3 /* AnswerCell.m in Sources */,
+				DF365F931B653C9700E8E9A3 /* NickNameVC.m in Sources */,
+				DF365F7D1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +502,7 @@
 				DFC906881B5FD99B00F4DFC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DFC906891B5FD99B00F4DFC5 /* Build configuration list for PBXNativeTarget "responderTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +511,7 @@
 				DFC9068B1B5FD99B00F4DFC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -17,6 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    0001
+//    0010
+//    0100
+//    1000
+    
+    const unsigned int choose = 0x02;
+    const unsigned int choose1 = 0x05;
+    if (choose1 & choose) {
+        NSLog(@"true");
+    }else{
+        NSLog(@"false");
+    }
+    
     return YES;
 }
 
