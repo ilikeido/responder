@@ -43,6 +43,8 @@
 @property(nonatomic,strong) NSMutableData *recvData;
 @property(nonatomic,assign) int packLength;
 
+@property(nonatomic,strong) NSTimer *ackTimer;
+
 
 @end
 
@@ -176,12 +178,22 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DeviceHelper)
     if (_notifyCharacteristic) {
         [_testPeripheral setNotifyValue:YES forCharacteristic:_notifyCharacteristic];
     }
+    if (_writeCharacteristic) {
+        _ackTimer = [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(writeAck) userInfo:nil repeats:YES];
+        [_ackTimer fire];
+    }
+}
+
+-(void)writeAck{
+    int i = 1;
+    NSData *data = [NSData dataWithBytes: &i length: sizeof(i)];
+    [_testPeripheral writeValue:data forCharacteristic:_writeCharacteristic type:CBCharacteristicWriteWithoutResponse ];
 }
 
 -(void)proessData{
     if (self.recvData.length>2) {
         NSData *keyData = [self.recvData subdataWithRange:NSMakeRange(0, 1)];
-        int temp;
+        int temp = 0;
         [keyData getBytes: &temp length: sizeof(temp)];
         if (temp == HAL_KEY_START) {
             NSData *lengthData = [self.recvData subdataWithRange:NSMakeRange(1, 1)];
@@ -367,6 +379,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DeviceHelper)
 }
 
 -(void)reset{
+    if (_ackTimer) {
+        [_ackTimer invalidate];
+        _ackTimer = nil;
+    }
     if (_testPeripheral) {
         [_manager cancelPeripheralConnection:_testPeripheral];
         _testPeripheral = nil;

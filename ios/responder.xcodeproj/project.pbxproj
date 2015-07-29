@@ -25,20 +25,9 @@
 		DFC906721B5FD99B00F4DFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFC906701B5FD99B00F4DFC5 /* Main.storyboard */; };
 		DFC906741B5FD99B00F4DFC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFC906731B5FD99B00F4DFC5 /* Images.xcassets */; };
 		DFC906771B5FD99B00F4DFC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFC906751B5FD99B00F4DFC5 /* LaunchScreen.xib */; };
-		DFC906831B5FD99B00F4DFC5 /* responderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC906821B5FD99B00F4DFC5 /* responderTests.m */; };
 		DFC9068D1B5FD9A700F4DFC5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC9068C1B5FD9A700F4DFC5 /* CoreBluetooth.framework */; };
 		DFFFF1011B6350A000B710D8 /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF1001B6350A000B710D8 /* DeviceHelper.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DFC9067D1B5FD99B00F4DFC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DFC9065B1B5FD99A00F4DFC5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DFC906621B5FD99A00F4DFC5;
-			remoteInfo = responder;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DF365F7B1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
@@ -70,7 +59,6 @@
 		DFC906711B5FD99B00F4DFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFC906731B5FD99B00F4DFC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFC906761B5FD99B00F4DFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DFC9067C1B5FD99B00F4DFC5 /* responderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = responderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFC906811B5FD99B00F4DFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFC906821B5FD99B00F4DFC5 /* responderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = responderTests.m; sourceTree = "<group>"; };
 		DFC9068C1B5FD9A700F4DFC5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -85,13 +73,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFC9068D1B5FD9A700F4DFC5 /* CoreBluetooth.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFC906791B5FD99B00F4DFC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				DFC906631B5FD99A00F4DFC5 /* responder.app */,
-				DFC9067C1B5FD99B00F4DFC5 /* responderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,24 +188,6 @@
 			productReference = DFC906631B5FD99A00F4DFC5 /* responder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DFC9067B1B5FD99B00F4DFC5 /* responderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DFC906891B5FD99B00F4DFC5 /* Build configuration list for PBXNativeTarget "responderTests" */;
-			buildPhases = (
-				DFC906781B5FD99B00F4DFC5 /* Sources */,
-				DFC906791B5FD99B00F4DFC5 /* Frameworks */,
-				DFC9067A1B5FD99B00F4DFC5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DFC9067E1B5FD99B00F4DFC5 /* PBXTargetDependency */,
-			);
-			name = responderTests;
-			productName = responderTests;
-			productReference = DFC9067C1B5FD99B00F4DFC5 /* responderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -237,10 +199,6 @@
 				TargetAttributes = {
 					DFC906621B5FD99A00F4DFC5 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					DFC9067B1B5FD99B00F4DFC5 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = DFC906621B5FD99A00F4DFC5;
 					};
 				};
 			};
@@ -258,7 +216,6 @@
 			projectRoot = "";
 			targets = (
 				DFC906621B5FD99A00F4DFC5 /* responder */,
-				DFC9067B1B5FD99B00F4DFC5 /* responderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,13 +233,6 @@
 				DFC906771B5FD99B00F4DFC5 /* LaunchScreen.xib in Resources */,
 				DF365F9E1B65B74200E8E9A3 /* AnswerVC.xib in Resources */,
 				DFC906741B5FD99B00F4DFC5 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFC9067A1B5FD99B00F4DFC5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,23 +257,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFC906781B5FD99B00F4DFC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFC906831B5FD99B00F4DFC5 /* responderTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DFC9067E1B5FD99B00F4DFC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DFC906621B5FD99A00F4DFC5 /* responder */;
-			targetProxy = DFC9067D1B5FD99B00F4DFC5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFC906701B5FD99B00F4DFC5 /* Main.storyboard */ = {
@@ -432,9 +366,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = responder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01c78d9c-059d-4ee1-963b-67815a01f150";
+				PROVISIONING_PROFILE = "be95a277-270b-4024-ab21-a4e23308b044";
 			};
 			name = Debug;
 		};
@@ -443,43 +378,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = responder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01c78d9c-059d-4ee1-963b-67815a01f150";
-			};
-			name = Release;
-		};
-		DFC9068A1B5FD99B00F4DFC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = responderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/responder.app/responder";
-			};
-			name = Debug;
-		};
-		DFC9068B1B5FD99B00F4DFC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = responderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/responder.app/responder";
+				PROVISIONING_PROFILE = "be95a277-270b-4024-ab21-a4e23308b044";
 			};
 			name = Release;
 		};
@@ -500,15 +402,6 @@
 			buildConfigurations = (
 				DFC906871B5FD99B00F4DFC5 /* Debug */,
 				DFC906881B5FD99B00F4DFC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DFC906891B5FD99B00F4DFC5 /* Build configuration list for PBXNativeTarget "responderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFC9068A1B5FD99B00F4DFC5 /* Debug */,
-				DFC9068B1B5FD99B00F4DFC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

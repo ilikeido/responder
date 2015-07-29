@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
@@ -22,12 +23,6 @@
                         <constraint firstAttribute="height" constant="89" id="TaT-AT-MpH"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="子设备命名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vg-Fb-7Y0">
-                    <rect key="frame" x="-8" y="34" width="375" height="24"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsL-Xt-FWI">
                     <rect key="frame" x="8" y="28" width="40" height="34"/>
                     <state key="normal" image="btn_back">
@@ -45,6 +40,15 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子设备命名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vg-Fb-7Y0">
+                    <rect key="frame" x="0.0" y="33" width="375" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="USM-Ve-cw1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -52,6 +56,9 @@
                 <constraint firstItem="00n-GD-aCo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EI3-zW-tcp"/>
                 <constraint firstItem="Ir7-Rl-XK1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="XGH-wR-nc2"/>
                 <constraint firstAttribute="trailing" secondItem="Ir7-Rl-XK1" secondAttribute="trailing" constant="35" id="dVq-nK-KnV"/>
+                <constraint firstItem="0Vg-Fb-7Y0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jtD-D0-TF3"/>
+                <constraint firstAttribute="trailing" secondItem="0Vg-Fb-7Y0" secondAttribute="trailing" id="k2s-jA-XHf"/>
+                <constraint firstItem="0Vg-Fb-7Y0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="mgA-Cd-uu8"/>
                 <constraint firstItem="Ir7-Rl-XK1" firstAttribute="top" secondItem="00n-GD-aCo" secondAttribute="bottom" constant="78" id="sBy-V0-sxH"/>
                 <constraint firstItem="00n-GD-aCo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vsh-qI-ECv"/>
             </constraints>
