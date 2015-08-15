@@ -19,4 +19,6 @@ SYNTHESIZE_SINGLETON_FOR_HEADER(DataTool)
 
 -(void)saveNickName:(NSString *)nickname byDeviceName:(NSString *)deviceName;
 
+-(NSMutableDictionary *)choosePersonsMap;
+
 @end

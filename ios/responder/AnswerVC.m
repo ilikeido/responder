@@ -9,6 +9,7 @@
 #import "AnswerVC.h"
 #import "AnswerCell.h"
 #import "DataTool.h"
+#import "ReportVC.h"
 
 @interface AnswerVC ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -62,10 +63,17 @@
 }
 
 
+#pragma mark - Action
+
 - (IBAction)backAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
+}
+
+- (IBAction)tongjiAction:(id)sender {
+    ReportVC *vc = [[ReportVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

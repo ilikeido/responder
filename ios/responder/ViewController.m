@@ -14,6 +14,7 @@
 #import "DataTool.h"
 #import "NickNameVC.h"
 #import "AnswerVC.h"
+#import "ReportVC.h"
 
 @interface ViewController ()<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
@@ -40,6 +41,8 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deviceFound) name:BLE_DEVICE_FOUND object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onOnline:) name:BLE_SUBDEVICE_ONLINE object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onOffline:) name:BLE_SUBDEVICE_OFFLINE object:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -201,6 +204,7 @@
 }
 
 - (IBAction)begin:(id)sender {
+    
     [DataTool sharedDataTool].dataList = self.subDevices;
     AnswerVC *vc = [[AnswerVC alloc]init];
     [self presentViewController:vc animated:YES completion:^{

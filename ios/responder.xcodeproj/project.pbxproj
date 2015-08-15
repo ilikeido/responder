@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF040AFA1B78479B00F34357 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF040AF91B78478400F34357 /* Charts.framework */; };
+		DF040AFD1B7847B100F34357 /* responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF040AFC1B7847B100F34357 /* responder.swift */; };
+		DF040B011B78F02A00F34357 /* ReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF040AFF1B78F02A00F34357 /* ReportVC.m */; };
+		DF040B021B78F02A00F34357 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF040B001B78F02A00F34357 /* ReportVC.xib */; };
+		DF040B091B78F52500F34357 /* Charts.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = DF040AF91B78478400F34357 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DF365F7D1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F7C1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m */; };
 		DF365F801B65232100E8E9A3 /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DF365F7F1B65232100E8E9A3 /* GiFHUD.m */; };
 		DF365F821B6523F700E8E9A3 /* could.gif in Resources */ = {isa = PBXBuildFile; fileRef = DF365F811B6523F700E8E9A3 /* could.gif */; };
@@ -29,7 +34,44 @@
 		DFFFF1011B6350A000B710D8 /* DeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF1001B6350A000B710D8 /* DeviceHelper.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DF040AF81B78478400F34357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF040AF41B78478400F34357 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		DF040B061B78F4E800F34357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF040AF41B78478400F34357 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF040B081B78F4FF00F34357 /* Copy Files (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF040B091B78F52500F34357 /* Charts.framework in Copy Files (1 item) */,
+			);
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DF040AF41B78478400F34357 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		DF040AFB1B7847B000F34357 /* responder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "responder-Bridging-Header.h"; sourceTree = "<group>"; };
+		DF040AFC1B7847B100F34357 /* responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = responder.swift; sourceTree = "<group>"; };
+		DF040AFE1B78F02A00F34357 /* ReportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportVC.h; sourceTree = "<group>"; };
+		DF040AFF1B78F02A00F34357 /* ReportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportVC.m; sourceTree = "<group>"; };
+		DF040B001B78F02A00F34357 /* ReportVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
 		DF365F7B1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
 		DF365F7C1B65184B00E8E9A3 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
 		DF365F7E1B65232100E8E9A3 /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
@@ -72,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF040AFA1B78479B00F34357 /* Charts.framework in Frameworks */,
 				DFC9068D1B5FD9A700F4DFC5 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF040AF51B78478400F34357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF040AF91B78478400F34357 /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DF365F7A1B65184B00E8E9A3 /* ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +148,7 @@
 				DFC906651B5FD99A00F4DFC5 /* responder */,
 				DFC9067F1B5FD99B00F4DFC5 /* responderTests */,
 				DFC906641B5FD99A00F4DFC5 /* Products */,
+				DF040AF41B78478400F34357 /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +190,11 @@
 				DF365F9A1B65B74200E8E9A3 /* AnswerVC.h */,
 				DF365F9B1B65B74200E8E9A3 /* AnswerVC.m */,
 				DF365F9C1B65B74200E8E9A3 /* AnswerVC.xib */,
+				DF040AFC1B7847B100F34357 /* responder.swift */,
+				DF040AFB1B7847B000F34357 /* responder-Bridging-Header.h */,
+				DF040AFE1B78F02A00F34357 /* ReportVC.h */,
+				DF040AFF1B78F02A00F34357 /* ReportVC.m */,
+				DF040B001B78F02A00F34357 /* ReportVC.xib */,
 			);
 			path = responder;
 			sourceTree = "<group>";
@@ -178,10 +235,12 @@
 				DFC9065F1B5FD99A00F4DFC5 /* Sources */,
 				DFC906601B5FD99A00F4DFC5 /* Frameworks */,
 				DFC906611B5FD99A00F4DFC5 /* Resources */,
+				DF040B081B78F4FF00F34357 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF040B071B78F4E800F34357 /* PBXTargetDependency */,
 			);
 			name = responder;
 			productName = responder;
@@ -213,12 +272,28 @@
 			mainGroup = DFC9065A1B5FD99A00F4DFC5;
 			productRefGroup = DFC906641B5FD99A00F4DFC5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DF040AF51B78478400F34357 /* Products */;
+					ProjectRef = DF040AF41B78478400F34357 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DFC906621B5FD99A00F4DFC5 /* responder */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DF040AF91B78478400F34357 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = DF040AF81B78478400F34357 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DFC906611B5FD99A00F4DFC5 /* Resources */ = {
@@ -229,6 +304,7 @@
 				DFC906721B5FD99B00F4DFC5 /* Main.storyboard in Resources */,
 				DF365F941B653C9700E8E9A3 /* NickNameVC.xib in Resources */,
 				DF365F991B65B37200E8E9A3 /* AnswerCell.xib in Resources */,
+				DF040B021B78F02A00F34357 /* ReportVC.xib in Resources */,
 				DF365F8C1B65362800E8E9A3 /* SubDeviceCell.xib in Resources */,
 				DFC906771B5FD99B00F4DFC5 /* LaunchScreen.xib in Resources */,
 				DF365F9E1B65B74200E8E9A3 /* AnswerVC.xib in Resources */,
@@ -243,12 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF040AFD1B7847B100F34357 /* responder.swift in Sources */,
 				DFC9066F1B5FD99B00F4DFC5 /* ViewController.m in Sources */,
 				DF365F9D1B65B74200E8E9A3 /* AnswerVC.m in Sources */,
 				DFFFF1011B6350A000B710D8 /* DeviceHelper.m in Sources */,
 				DFC9066C1B5FD99B00F4DFC5 /* AppDelegate.m in Sources */,
 				DFC906691B5FD99B00F4DFC5 /* main.m in Sources */,
 				DF365F8B1B65362800E8E9A3 /* SubDeviceCell.m in Sources */,
+				DF040B011B78F02A00F34357 /* ReportVC.m in Sources */,
 				DF365F8F1B65373300E8E9A3 /* DataTool.m in Sources */,
 				DF365F801B65232100E8E9A3 /* GiFHUD.m in Sources */,
 				DF365F981B65B37200E8E9A3 /* AnswerCell.m in Sources */,
@@ -258,6 +336,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF040B071B78F4E800F34357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = DF040B061B78F4E800F34357 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DFC906701B5FD99B00F4DFC5 /* Main.storyboard */ = {
@@ -365,11 +451,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = responder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "be95a277-270b-4024-ab21-a4e23308b044";
+				SWIFT_OBJC_BRIDGING_HEADER = "responder/responder-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -377,11 +466,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = responder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "be95a277-270b-4024-ab21-a4e23308b044";
+				SWIFT_OBJC_BRIDGING_HEADER = "responder/responder-Bridging-Header.h";
 			};
 			name = Release;
 		};
