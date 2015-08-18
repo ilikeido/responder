@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setTableFooterView:[[UIView alloc]init]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -73,7 +74,10 @@
 
 - (IBAction)tongjiAction:(id)sender {
     ReportVC *vc = [[ReportVC alloc]init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

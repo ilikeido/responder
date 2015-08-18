@@ -57,7 +57,14 @@
 }
 
 - (IBAction)backAction:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if (self.navigationController) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
+    }
+    
 }
 
 - (void)setData
@@ -176,7 +183,8 @@
     NSDictionary *dict = [[DataTool sharedDataTool] choosePersonsMap];
     NSString *name = [dict.allKeys objectAtIndex:entry.xIndex];
     NSArray *array = [dict objectForKey:name];
-    _tv_content.text = [array componentsJoinedByString:@"\n"];
+    NSString *names = [array componentsJoinedByString:@"\t"];
+    _tv_content.text = [NSString stringWithFormat:@"选择答案%@的小朋友：\n\n%@",name,names];
 }
 
 - (void)chartValueNothingSelected:(ChartViewBase * __nonnull)chartView

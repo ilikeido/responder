@@ -29,6 +29,11 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[DataTool sharedDataTool]clearChoose];
+}
+
 - (IBAction)back:(id)sender {
     if (_tf_nickname.text.length>0) {
         [[DataTool sharedDataTool]saveNickName:_tf_nickname.text byDeviceName:_deviceName];

@@ -8,10 +8,18 @@
 
 #import "DataTool.h"
 #import "DeviceHelper.h"
+#import "LKDBHelper.h"
+
+@implementation NickDevice
+
++(NSString *)getTableName
+{
+    return @"NickDeviceTable";
+}
+
+@end
 
 @interface DataTool ()
-
-@property(nonatomic,strong) NSMutableDictionary *deviceDict;
 
 @property(nonatomic,strong) NSMutableDictionary *chooseDict;
 
@@ -24,10 +32,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
 -(id)init{
     self = [super init];
     if (self) {
-        self.deviceDict = [NSMutableDictionary dictionary];
         self.dataList = [NSMutableArray array];
         self.chooseDict = [NSMutableDictionary dictionary];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onSubmit:) name:BLE_SUBDEVICE_SUBMIT object:nil];
+        [NickDevice getUsingLKDBHelper];
     }
     return self;
 }
@@ -40,9 +48,6 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
 }
 
 -(NSMutableDictionary *)choosePersonsMap{
-    
-    _chooseDict = [@{@"小明":@[@"A",@"B"],@"小红":@[@"A",@"C"],@"小李":@[@"C",@"D"],@"小汤":@[@"A"]} mutableCopy];
-    
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSMutableArray *array_a = [NSMutableArray array];
     NSMutableArray *array_b = [NSMutableArray array];
@@ -85,16 +90,29 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
     return dict;
 }
 
+-(void)clearChoose{
+    [_chooseDict removeAllObjects];
+}
+
 -(NSString *)nickNameByDeviceName:(NSString *)deviceName{
-    NSString *name = [_deviceDict objectForKey:deviceName];
-    if (!name) {
-        return deviceName;
+    NickDevice *entity = [NickDevice searchSingleWithWhere:[NSString stringWithFormat:@"deviceName='%@'",deviceName] orderBy:nil];
+    if (entity) {
+        return entity.nickName;
     }
-    return name;
+    return deviceName;
 }
 
 -(void)saveNickName:(NSString *)nickname byDeviceName:(NSString *)deviceName{
-    [_deviceDict setObject:nickname forKey:deviceName];
+    NickDevice *entity = [NickDevice searchSingleWithWhere:[NSString stringWithFormat:@"deviceName='%@'",deviceName] orderBy:nil];
+    if(!entity){
+        entity = [[NickDevice alloc]init];
+        entity.deviceName = deviceName;
+        entity.nickName = nickname;
+        [entity saveToDB];
+    }else{
+        entity.nickName = nickname;
+        [entity updateToDB];
+    }
 }
 
 -(void)dealloc{

@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "ARCSingletonTemplate.h"
 
+@interface NickDevice : NSObject
+
+@property(nonatomic,strong) NSString *deviceName;
+
+@property(nonatomic,strong) NSString *nickName;
+
+@end
+
 @interface DataTool : NSObject
 
 SYNTHESIZE_SINGLETON_FOR_HEADER(DataTool)
@@ -20,5 +28,7 @@ SYNTHESIZE_SINGLETON_FOR_HEADER(DataTool)
 -(void)saveNickName:(NSString *)nickname byDeviceName:(NSString *)deviceName;
 
 -(NSMutableDictionary *)choosePersonsMap;
+
+-(void)clearChoose;
 
 @end
