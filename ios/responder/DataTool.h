@@ -29,6 +29,8 @@ SYNTHESIZE_SINGLETON_FOR_HEADER(DataTool)
 
 -(NSMutableDictionary *)choosePersonsMap;
 
+-(NSDictionary *)personChooseMap;
+
 -(void)clearChoose;
 
 @end

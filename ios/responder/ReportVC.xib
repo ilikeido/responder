@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -8,6 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportVC">
             <connections>
                 <outlet property="chartView" destination="h3G-u3-Gpi" id="Ytg-ra-zcG"/>
+                <outlet property="chooseView" destination="Rq5-hd-OGb" id="JDO-LS-Rjj"/>
+                <outlet property="navBar" destination="kKH-5n-R24" id="5EC-2U-V9G"/>
+                <outlet property="topLayoutConstraint" destination="37N-kD-tq1" id="wKY-Uf-ZDb"/>
                 <outlet property="tv_content" destination="o3E-2y-pta" id="kec-i5-uPK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,34 +26,73 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmR-1q-uFg">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconE_n" translatesAutoresizingMaskIntoConstraints="NO" id="Qst-Ss-c7o">
-                                    <rect key="frame" x="241" y="8" width="35" height="35"/>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconD_n" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-o5-Mgv">
-                                    <rect key="frame" x="182" y="9" width="35" height="35"/>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconC_n" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-h4-LoE">
-                                    <rect key="frame" x="127" y="8" width="35" height="35"/>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconB_n" translatesAutoresizingMaskIntoConstraints="NO" id="Xrg-Ko-ThP">
-                                    <rect key="frame" x="72" y="9" width="35" height="35"/>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconA_n" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-0z-5UH">
-                                    <rect key="frame" x="20" y="10" width="35" height="35"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmc-Wm-HaQ">
-                                    <rect key="frame" x="298" y="11" width="46" height="30"/>
-                                    <state key="normal" title="筛选">
-                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDw-sp-ZAH">
+                                    <rect key="frame" x="308" y="11" width="46" height="30"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <state key="normal" title="隐藏">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="hideAction:" destination="-1" eventType="touchUpInside" id="Yvy-Fn-nuE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRy-jI-9xU">
+                                    <rect key="frame" x="22" y="9" width="33" height="34"/>
+                                    <state key="normal" backgroundImage="iconA_n">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" backgroundImage="iconA_s"/>
+                                    <connections>
+                                        <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="psd-bA-f8T"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENe-oH-R8K">
+                                    <rect key="frame" x="185" y="10" width="33" height="34"/>
+                                    <state key="normal" backgroundImage="iconD_n">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" backgroundImage="iconD_s"/>
+                                    <connections>
+                                        <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="q2b-Vc-bMB"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="53" id="CNp-pU-n75"/>
-                                <constraint firstAttribute="width" constant="375" id="jhf-Pe-Llf"/>
+                                <constraint firstAttribute="width" priority="777" constant="375" id="jhf-Pe-Llf"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9T-Gv-8dg">
+                            <rect key="frame" x="75" y="10" width="33" height="34"/>
+                            <state key="normal" backgroundImage="iconB_n">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="iconB_s"/>
+                            <connections>
+                                <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="1ZZ-3S-QqT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3q-SG-8dX">
+                            <rect key="frame" x="129" y="10" width="33" height="34"/>
+                            <state key="normal" backgroundImage="iconC_n">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="iconC_s"/>
+                            <connections>
+                                <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="tuA-ec-ND2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KZ-Wp-u5P">
+                            <rect key="frame" x="243" y="10" width="33" height="34"/>
+                            <state key="normal" backgroundImage="iconE_n">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="iconE_s"/>
+                            <connections>
+                                <action selector="selectAction:" destination="-1" eventType="touchUpInside" id="8yo-v0-kJm"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.91189505691190476" green="0.91189505691190476" blue="0.91189505691190476" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -100,39 +142,61 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmc-Wm-HaQ">
+                    <rect key="frame" x="314" y="30" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="7e3-BE-mzK"/>
+                        <constraint firstAttribute="height" constant="30" id="Q0B-c7-abl"/>
+                    </constraints>
+                    <state key="normal" title="筛选">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="filterAction:" destination="-1" eventType="touchUpInside" id="l8U-Tw-w6W"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="Nmc-Wm-HaQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="0xx-1b-VKS"/>
+                <constraint firstItem="Rq5-hd-OGb" firstAttribute="top" secondItem="kKH-5n-R24" secondAttribute="bottom" constant="-4" id="37N-kD-tq1"/>
                 <constraint firstItem="h3G-u3-Gpi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4cG-Yc-eAw"/>
                 <constraint firstAttribute="trailing" secondItem="lPN-C8-ydK" secondAttribute="trailing" id="6Zq-NY-oCl"/>
                 <constraint firstItem="lPN-C8-ydK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="79V-Ox-A5c"/>
+                <constraint firstItem="kKH-5n-R24" firstAttribute="leading" secondItem="Rq5-hd-OGb" secondAttribute="trailing" constant="-375" id="9bR-QU-vQD"/>
                 <constraint firstAttribute="trailing" secondItem="h3G-u3-Gpi" secondAttribute="trailing" id="Adx-An-XIk"/>
                 <constraint firstItem="o3E-2y-pta" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29" id="EhM-GY-7BU"/>
                 <constraint firstItem="Rq5-hd-OGb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EvS-R5-088"/>
                 <constraint firstItem="dnA-ut-gWt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Ka1-tq-pNz"/>
                 <constraint firstItem="kKH-5n-R24" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MkH-0J-on9"/>
                 <constraint firstItem="lPN-C8-ydK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y14-9b-1Uq"/>
+                <constraint firstAttribute="trailing" secondItem="Nmc-Wm-HaQ" secondAttribute="trailing" constant="15" id="Ziy-4o-dzE"/>
                 <constraint firstAttribute="trailing" secondItem="kKH-5n-R24" secondAttribute="trailing" id="aKE-u7-eFz"/>
                 <constraint firstAttribute="bottom" secondItem="o3E-2y-pta" secondAttribute="bottom" id="fif-Dx-Acz"/>
                 <constraint firstItem="o3E-2y-pta" firstAttribute="top" secondItem="h3G-u3-Gpi" secondAttribute="bottom" constant="8" id="h9l-Qq-29O"/>
-                <constraint firstItem="Rq5-hd-OGb" firstAttribute="top" secondItem="dnA-ut-gWt" secondAttribute="bottom" constant="23" id="jqd-3B-ZL6"/>
                 <constraint firstItem="dnA-ut-gWt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="28" id="myy-U5-5Yj"/>
+                <constraint firstItem="h3G-u3-Gpi" firstAttribute="top" secondItem="Rq5-hd-OGb" secondAttribute="bottom" id="nWy-Ta-0IT"/>
                 <constraint firstItem="kKH-5n-R24" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qIQ-LV-c2E"/>
                 <constraint firstAttribute="trailing" secondItem="o3E-2y-pta" secondAttribute="trailing" constant="29" id="qQZ-zb-Aez"/>
-                <constraint firstItem="h3G-u3-Gpi" firstAttribute="top" secondItem="dnA-ut-gWt" secondAttribute="bottom" constant="76" id="wBf-Za-xPt"/>
+                <constraint firstItem="kKH-5n-R24" firstAttribute="leading" secondItem="Rq5-hd-OGb" secondAttribute="trailing" constant="-375" id="v3E-h6-p2h"/>
                 <constraint firstAttribute="trailing" secondItem="Rq5-hd-OGb" secondAttribute="trailing" id="y3e-hm-hDc"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="-260.5" y="29.5"/>
+            <point key="canvasLocation" x="-231.5" y="32.5"/>
         </view>
     </objects>
     <resources>
         <image name="btn_back" width="13" height="22"/>
         <image name="iconA_n" width="19" height="19"/>
+        <image name="iconA_s" width="19" height="19"/>
         <image name="iconB_n" width="19" height="19"/>
+        <image name="iconB_s" width="19" height="19"/>
         <image name="iconC_n" width="19" height="19"/>
+        <image name="iconC_s" width="19" height="19"/>
         <image name="iconD_n" width="19" height="19"/>
+        <image name="iconD_s" width="19" height="19"/>
         <image name="iconE_n" width="19" height="19"/>
+        <image name="iconE_s" width="19" height="19"/>
         <image name="navBar" width="375" height="89"/>
     </resources>
 </document>

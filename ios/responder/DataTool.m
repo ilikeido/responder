@@ -36,6 +36,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
         self.chooseDict = [NSMutableDictionary dictionary];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onSubmit:) name:BLE_SUBDEVICE_SUBMIT object:nil];
         [NickDevice getUsingLKDBHelper];
+        self.chooseDict = [@{@"小明":@[@"A",@"B",@"C",@"D"],@"小红":@[@"A",@"B",@"C"],@"小白":@[@"B",@"C",@"D"],@"小钟":@[@"C",@"D"]} mutableCopy];
     }
     return self;
 }
@@ -45,6 +46,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
     NSArray *value = [notification.object objectForKey:@"value"];
     NSString *nickname = [[DataTool sharedDataTool]nickNameByDeviceName:mac] ;
     [_chooseDict setValue:value forKey:nickname];
+}
+
+
+-(NSDictionary *)personChooseMap{
+    return _chooseDict;
 }
 
 -(NSMutableDictionary *)choosePersonsMap{
