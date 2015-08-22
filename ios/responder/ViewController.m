@@ -41,10 +41,10 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(deviceFound) name:BLE_DEVICE_FOUND object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onOnline:) name:BLE_SUBDEVICE_ONLINE object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onOffline:) name:BLE_SUBDEVICE_OFFLINE object:nil];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        ReportVC *vc = [[ReportVC alloc]init];
-        [self presentViewController:vc animated:YES completion:nil];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        ReportVC *vc = [[ReportVC alloc]init];
+//        [self presentViewController:vc animated:YES completion:nil];
+//    });
     
 }
 

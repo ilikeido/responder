@@ -36,7 +36,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(DataTool)
         self.chooseDict = [NSMutableDictionary dictionary];
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onSubmit:) name:BLE_SUBDEVICE_SUBMIT object:nil];
         [NickDevice getUsingLKDBHelper];
-        self.chooseDict = [@{@"小明":@[@"A",@"B",@"C",@"D"],@"小红":@[@"A",@"B",@"C"],@"小白":@[@"B",@"C",@"D"],@"小钟":@[@"C",@"D"]} mutableCopy];
+//        self.chooseDict = [@{@"小明":@[@"A",@"B",@"C",@"D"],@"小红":@[@"A",@"B",@"C"],@"小白":@[@"B",@"C",@"D"],@"小钟":@[@"C",@"D"]} mutableCopy];
     }
     return self;
 }

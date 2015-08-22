@@ -147,12 +147,12 @@
     
     _chartView.data = data;
     [_chartView highlightValues:nil];
-    [_chartView reloadInputViews];
+    [_chartView animateWithXAxisDuration:1.5 yAxisDuration:1.5 easingOption:ChartEasingOptionEaseOutBack];
 }
 
 - (IBAction)filterAction:(id)sender {
     self.menu_show = 1;
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
        _topLayoutConstraint.constant = - 4;
         [self.view layoutIfNeeded];
     }];
@@ -160,7 +160,7 @@
 
 - (IBAction)hideAction:(id)sender {
     self.menu_show = 0;
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         _topLayoutConstraint.constant = -_chooseView.frame.size.height - 4;
         [self.view layoutIfNeeded];
     }];
